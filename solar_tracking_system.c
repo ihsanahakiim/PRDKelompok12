@@ -99,4 +99,5 @@ tolerance else change horizontal angle
  Serial.print(servov);
  Serial.print(" ");
  delay(dtime);
+ return 0;
 }
