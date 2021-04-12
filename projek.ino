@@ -48,7 +48,6 @@ Serial.print(" ");
 Serial.print(tol);
 Serial.println(" ");
 if (-1*tol > dvert || dvert > tol) // check if the diffirence is in the
-tolerance else change vertical angle
  {
  if (avt > avd)
  {
@@ -69,7 +68,6 @@ tolerance else change vertical angle
  vertical.write(servov);
  }
 if (-1*tol > dhoriz || dhoriz > tol) // check if the diffirence is in the
-tolerance else change horizontal angle
  {
  if (avl > avr)
  {
