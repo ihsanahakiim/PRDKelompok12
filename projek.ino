@@ -26,20 +26,24 @@ Serial.println(" "); //menampilkan serial monitor besar cahaya serap photosensor
   Serial.println(c);
   Serial.print("d : ");
   Serial.println(d);
-int atas = a+d;
-int bawah = b+c;
-if ((atas - bawah)> 1000) {
+int atas = a+b;
+int bawah = c+d;
+Serial.print("atas : "); // menampilkan serial monitor akumulasi serapan photosensor atas dan bawah
+  Serial.println(atas);
+  Serial.print("bawah : ");
+  Serial.println(bawah);
+if ((atas - bawah)> 400) {
   posisi =- 3;
-  if (posisi < 90 ) { //sudut minimum servo
-    posisi = 90;
+  if (posisi < 50 ) { //sudut minimum servo
+    posisi = 50;
     }
   myServo.write(posisi);
   
   }
- else if ((atas - bawah)> 1000) {
+ else if ((atas - bawah)> 400) {
   posisi += 3;
-  if (posisi > 170 ) {
-    posisi = 170;
+  if (posisi > 150 ) {
+    posisi = 150;
     }
   myServo.write(posisi); //sudut maksimumm servo
   } 
